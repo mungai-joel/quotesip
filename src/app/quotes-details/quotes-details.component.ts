@@ -9,7 +9,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class QuotesDetailComponent implements OnInit {
   votes: number;
-  @Input() quote: Quote;
+  @Input()
+  quote!: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
 
   quoteDelete(complete: boolean) {
