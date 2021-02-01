@@ -7,17 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'quotes app';
+  title = 'Quotes app';
   quotes: Quote[] = [
     new Quote(
       'Coders are fueled by Morning coffee',
-      'David Baldaci',
+      'Moon man',
       'Moonguy',
       new Date(2021, 1, 31)
     ),
     new Quote(
       'Lms is not a Bible',
-      'David goliath',
+      'Moonguy',
       'man moon',
       new Date(2021, 1, 31)
     ),
