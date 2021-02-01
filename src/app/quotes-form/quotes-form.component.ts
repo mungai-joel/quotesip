@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   templateUrl: './quotes-form.component.html',
   styleUrls: ['./quotes-form.component.css']
 })
-export class GoalFormComponent implements OnInit {
+export class QuotesFormComponent implements OnInit {
   newQuote = new Quote('', '', '', new Date());
   @Output() addQuote = new EventEmitter<Quote>();
 
