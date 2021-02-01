@@ -1,5 +1,7 @@
 export class Quote {
     showDescription: boolean;
+  id?: number;
+  completeDate?: Date;
     constructor(
       public name: string,
       public author: string,

@@ -28,10 +28,10 @@ export class QuotesComponent implements OnInit {
     )
   ];
 
-  toggleDetails(index) {
+  toggleDetails(index:any) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-  deleteQuote(isComplete: any, index: number) {
+  deleteQuote(isComplete:any, index: number) {
     if (isComplete) {
       let toDelete = confirm(
         `Are you sure you want to delete ${this.quotes[index].name}?`
@@ -42,7 +42,7 @@ export class QuotesComponent implements OnInit {
       }
     }
   }
-  addNewQuote(quote: Quote) {
+  addNewQuote(quote: any) {
     let quoteLength = this.quotes.length;
     quote.id = quoteLength + 1;
     quote.completeDate = new Date(quote.completeDate);
