@@ -2,6 +2,24 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.2.
 
+BY Joel Mungai
+
+##Setup/Installation requirements.
+
+Clone or download the repository using git clone
+cd to the directory on the terminal
+run the command ng serve --open to open in your browser
+changes can be made in your IDE
+
+##Technologies used
+
+
+    HTML
+    CSS
+    Typescript
+    Angular 9
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
