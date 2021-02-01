@@ -1,0 +1,23 @@
+.authr {
+    text-decoration-color: rgb(214, 214, 214);
+  }
+  .bg-danger {
+    padding-bottom: 20px;
+  }
+  .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+  .quote {
+    font-size: x-large;
+    font-weight: bolder;
+    font-style: italic;
+  }
+  .quotes {
+    font-size: large;
+    font-weight: bolder;
+    font-style: italic;
+  }
