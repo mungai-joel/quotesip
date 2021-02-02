@@ -4,17 +4,9 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
-  constructor(private elem: ElementRef) {}
-
-  @HostListener('mouseover') onHover() {
-    this.textDeco('underline');
+  constructor(private elem: ElementRef) {
+    this.elem.nativeElement.style.color="yellow"
+    this.elem.nativeElement.style.backgroundColor="blue" 
   }
 
-  @HostListener('mouseout') onMouseOut() {
-    this.textDeco('None');
-  }
-
-  private textDeco(action: string) {
-    this.elem.nativeElement.style.textDecoration = action;
-  }
 }

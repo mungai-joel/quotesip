@@ -1,5 +1,5 @@
 import { Quote } from './../quotes';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-quotes',
@@ -10,13 +10,13 @@ export class QuotesComponent implements OnInit {
   quotes: Quote[] = [
     new Quote(
       'Coders are fueled by Morning coffee',
-      'David Baldaci',
+      'Moon man',
       'Moonguy',
       new Date(2020, 3, 31)
     ),
     new Quote(
       'Lms is not a Bible',
-      'David goliath',
+      'Moonguy',
       'man moon',
       new Date(2020, 3, 31)
     ),
@@ -28,13 +28,16 @@ export class QuotesComponent implements OnInit {
     )
   ];
 
+  @Input()
+  quote!: Quote;
+
   toggleDetails(index:any) {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
-  deleteQuote(isComplete:any, index: number) {
+  deleteQuote(isComplete: any, index: number) {
     if (isComplete) {
       let toDelete = confirm(
-        `Are you sure you want to delete ${this.quotes[index].name}?`
+        `Are you sure you want to delete ${this.quotes[index].user}?`
       );
 
       if (toDelete) {
@@ -48,6 +51,27 @@ export class QuotesComponent implements OnInit {
     quote.completeDate = new Date(quote.completeDate);
     this.quotes.push(quote);
   }
+
+  startNum:any;
+  lastNum:any;
+  ctr?:number;
+
+  hUpvote(){
+
+    this.startNum = 0
+    this.lastNum = 0
+
+    for(this.ctr=0 ; this.ctr < this.quotes.length; this.ctr++) {
+    this.lastNum = this.quotes[this.ctr].uvotes;
+
+    if (this.lastNum > this.startNum){
+        this.startNum = this.lastNum
+    }
+} 
+
+return this.startNum
+} 
+
 
   constructor() {}
 

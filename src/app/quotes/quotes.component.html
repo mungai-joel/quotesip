@@ -7,13 +7,25 @@
           <div *ngFor='let quote of quotes;let i = index'>
             <div class="card">
               <div>
-                <li>
-                  <span class="quote" appHighlight>"{{quote.name}}" </span>
+                <li appHighlight *ngIf="hUpvote()===quote.uvotes && quote.uvotes > 0">
+Quote Name: {{quote.quote}}
+
+</li>
+              
+
+<li *ngIf="hUpvote()!==quote.uvotes || quote.uvotes===0">
+Quote Name : {{quote.quote}}
+
+</li>
+ 
+          
+
+
                   <br>
                   posted {{quote.postDate | dateCount}} by
                   <span class="quotes">~{{quote.user}}~</span>
 
-                </li>
+                
                 <button (click)='toggleDetails(i)' class="btn btn-primary">Author</button>
               </div>
             </div>

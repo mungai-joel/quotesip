@@ -30,5 +30,7 @@ export class QuotesDetailComponent implements OnInit {
     return false;
   }
 
+
+
   ngOnInit() {}
 }
